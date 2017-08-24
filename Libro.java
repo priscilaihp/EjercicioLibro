@@ -3,9 +3,19 @@ public class Libro
     private String titulo;
     private String autor;
     
-    public Libro(String tituloLibro, String autorLibro)
+    public Libro(String tLibro, String aLibro)
     {
-        titulo+=tituloLibro;
-        autor+=autorLibro;
+        titulo = tLibro;
+        autor = aLibro;
+    }
+    
+    String dimeAutor()
+    {
+        return autor;
+    }
+    
+    String dimeTitulo()
+    {
+        return titulo;
     }
 }
