@@ -10,7 +10,7 @@ public class Libro
         titulo = tLibro;
         autor = aLibro;
         paginas = pLibro;
-        numeroDeReferencia = "0";
+        numeroDeReferencia = "";
     }
     
     String dimeAutor()
@@ -31,7 +31,7 @@ public class Libro
     String dimeDetalles()
     {
         String datos = " ";
-        String compara = "0";
+        String compara = "";
         
         datos += "Título:";
         datos += titulo;
@@ -54,7 +54,12 @@ public class Libro
     
     void cambiaNumRef(String numReferencia)
     {
-        numeroDeReferencia = numReferencia;
+        String compara = "100";
+        
+        if(numReferencia.length() >= compara.length())
+        {
+            numeroDeReferencia = numReferencia;
+        }
     }
     
     String dimeNumRef()
