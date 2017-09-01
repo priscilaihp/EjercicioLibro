@@ -1,11 +1,19 @@
 public class Libro
 {
+    // Variables de Instancia
     private String titulo;
     private String autor;
     private int paginas;
     private String numeroDeReferencia;
     private int prestamos;
     
+    /**
+     * Constructor
+     * @author Priscila Hernandez
+     * @param tLibro Pregunta el título del Libro.
+     * @param aLibro Pregunta el autor del Libro.
+     * @param pLibro Pregunta el total de las paginas del Libro.
+     */
     public Libro(String tLibro, String aLibro, int pLibro)
     {
         titulo = tLibro;
@@ -15,24 +23,38 @@ public class Libro
         prestamos = 0;
     }
     
-    String dimeAutor()
+    /**
+     * @return Muestra el autor del Libro.
+     */
+    public String dimeAutor()
     {
         return autor;
     }
     
-    String dimeTitulo()
+    /**
+     * @return Muestra el título del Libro.
+     */
+    public String dimeTitulo()
     {
         return titulo;
     }
     
-    int dimePaginas()
+    /**
+     * @return Muestra el total de las paginas del Libro.
+     */
+    public int dimePaginas()
     {
         return paginas;
     }
     
-    String dimeDetalles()
+    /**
+     * Muestra todos los detalles (Título, Autor, Páginas, Prestamos) del Libro.
+     * Muestra el numero de referencia solo si se le a asignado valor.
+     * @return Regresa una cadena de caracteres con toda la información.
+     */
+    public String dimeDetalles()
     {
-        String datos = " ";
+        String datos = "";
         String compara = "";
         
         datos += "Título:";
@@ -41,6 +63,7 @@ public class Libro
         datos += autor;
         datos += ", Páginas:";
         datos += paginas;
+        
         if(numeroDeReferencia.length() != compara.length())
         {
             datos += ", Numero de Referencia:";
@@ -56,7 +79,10 @@ public class Libro
         return datos;
     }
     
-    void cambiaNumRef(String numReferencia)
+    /**
+     * Cambia el numero de referncia solo si es de 3 caracteres.
+     */
+    public void cambiaNumRef(String numReferencia)
     {
         String compara = "100";
         
@@ -66,17 +92,26 @@ public class Libro
         }
     }
     
-    String dimeNumRef()
+    /**
+     * @return Muestra el numero de referencia.
+     */
+    public String dimeNumRef()
     {
         return numeroDeReferencia;
     }
     
-    void prestar()
+    /**
+     * Aumenta en uno el numero de los prestamos.
+     */
+    public void prestar()
     {
         prestamos += 1;
     }
     
-    int dimePrestamos()
+    /**
+     * @return Muestra el numero de prestamos.
+     */
+    public int dimePrestamos()
     {
         return prestamos;
     }
